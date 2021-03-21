@@ -1,0 +1,15 @@
+<div>
+  <form (ngSubmit)="onSubmit(optionsForm.value)" [formGroup]="optionsForm">
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Personal Access Token" formControlName="personalAccessToken">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Github Username" formControlName="githubUsername">
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary">Save Options</button>
+  </form>
+</div>

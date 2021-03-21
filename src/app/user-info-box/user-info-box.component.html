@@ -1,0 +1,18 @@
+<h1 class="mat-display-1">
+  <a href="https://github.com/{{user.id}}" target="_blank">{{user.id}}</a>
+  <button mat-button mat-raised-button class="primary" (click)="tryExpand(user.id)">Expand</button>
+</h1>
+<h2 class="mat-display-2">Organizations</h2>
+<p *ngFor="let org of user.organizations">
+  {{org.login}}
+</p>
+<h2 class="mat-display-2">Repositories</h2>
+<p *ngFor="let repo of user.repositories">
+  {{repo.name}}
+</p>
+<h2>Strong adjacent connections</h2>
+<div *ngFor="let node of graph.bidirectionalLinks[user.id]">
+  {{node}}
+</div>
+<h2>Incoming nodes: {{graph.incomingCount[user.id]}}</h2>
+<h2>Outgoing nodes: {{graph.outgoingCount[user.id]}}</h2>

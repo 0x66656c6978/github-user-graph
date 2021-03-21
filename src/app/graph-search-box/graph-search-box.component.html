@@ -1,0 +1,20 @@
+<div>
+  <form (ngSubmit)="expandGraph(searchForm.value.userName)" [formGroup]="searchForm">
+    <p>
+      <mat-form-field appearance="standard">
+        <input matInput placeholder="User Name" formControlName="userName">
+        <mat-error *ngIf="searchForm.controls.userName.invalid && searchForm.controls.userName.dirty"></mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Max. Graph Depth" formControlName="maxGraphDepth">
+        <mat-error *ngIf="searchForm.controls.maxGraphDepth.invalid && searchForm.controls.maxGraphDepth.dirty"></mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <button mat-raised-button color="primary">Search</button>
+    </p>
+  </form>
+  <button mat-raised-button color="danger" (click)="stopCurrentSearch()">Cancel Search</button>
+</div>

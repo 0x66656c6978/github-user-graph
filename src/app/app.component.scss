@@ -1,0 +1,18 @@
+.container {
+  margin: auto auto;
+  max-width: 1020px;
+  display: flex;
+}
+.columns {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+app-following-graph {
+}
+app-graph-search-box {
+  margin: 2em;
+}
+app-options {
+  margin: 2em;
+}
